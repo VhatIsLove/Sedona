@@ -1,0 +1,631 @@
+@font-face{
+	font-family: "PT Sans";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../fonts/PTSans-Regular.woff2") format("woff2");
+	font-display: swap;
+}
+@font-face{
+	font-family: "PT Sans";
+	font-style: normal;
+	font-weight: 700;
+	src: url("../fonts/PTSans-700.woff2") format("woff2");
+	font-display: swap;
+}
+html {
+	box-sizing: border-box;
+	height: 100%;
+
+}
+body{
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	min-height: 100%;
+	font-family: "PT Sans", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	color: #333333;
+}
+.visually-hidden{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+ul, ol{
+	list-style-type: none;
+}
+
+/* Шапка старт*/
+.logo-link{
+	margin-bottom: -8px;
+	margin-right: auto;
+	z-index: 1;
+}
+.navigation-link{
+	display: block;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 26px;
+	color: #000000;
+	text-decoration: none;
+	padding: 20px 17px;
+}
+.header-wrapper{
+	display: flex;
+	align-items: center;
+	width: 1060px;
+	margin: 0 auto;
+}
+.navigation{
+	display: flex;
+	align-items: center;
+	width: 891px;
+}
+.navigation-header{
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 0;
+	margin: 0;
+	margin-right: auto;
+	width: 345px;
+}
+.navigation-header-user{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 0;
+	width: 264px;
+}
+.nav-user{
+	padding: 24px 12px;
+	min-width: 18px;
+	min-height: 17px;
+}
+.navigation-menu-button{
+	margin-left: auto;
+}
+/* Шапка финиш*/
+
+/* Кнопки старт*/
+.button{
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+	border-radius: 4px;
+	border: 0;
+}
+.button-header{
+	display: block;
+	background-color: #756257;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px;
+	width: 160px;
+	height: 37px;
+	text-decoration: none;
+	padding: 8px 15px;
+	box-sizing: border-box;
+}
+.form-submit-send{
+	width: 160px;
+	height: 48px;
+	background-color: #83B3D3;
+	font-size: 16px;
+	line-height: 21px;
+	font-weight: 700;
+	margin-top: 60px;
+	margin-bottom: 20px;
+}
+.form-submit-reset{
+	font-size: 18px;
+	line-height: 23px;
+	background-color: transparent;
+	color: #FFFFFF;
+	border: 0;
+}
+.product-card-button-link{
+	display: block;
+	box-sizing: border-box;
+	background-color: #756257;
+	width: 133px;
+	height: 37px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 21px;
+	text-decoration: none;
+	padding: 9px;
+}
+.product-card-button{
+	background-color: #83B3D3;
+	width: 141px;
+	height: 37px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 21px;
+}
+.product-card-button-green{
+	background-color: #7DB54F;
+	width: 141px;
+	height: 37px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 21px;
+}
+.section-product-card-button{
+	height: 60px;
+	width: 620px;
+	background-color: #83B3D3;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 26px;
+	margin-left: 290px;
+	margin-bottom: 60px;
+}
+.pagination-link{
+	text-decoration: none;
+	background-color: #83B3D3;
+	display: flex;
+	width: 55px;
+	height: 55px;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Кнопки финиш*/
+
+
+/*Основная часть Котолог старт*/
+.catalog-filter{
+	background: #09e9e986 url("../image/Rast/catalog-background-new.jpg") no-repeat;
+	max-width: 1200px;
+	height: 408px;
+	box-sizing: border-box;
+	color: #FFFFFF;
+	font-size: 18px;
+	line-height: 23px;
+	padding-top: 35px;
+	padding-left: 71px;
+	margin-bottom: 44px;
+}
+.catalog-filter-title{
+	width: 528px;
+	font-weight: 700;
+	font-size: 60px;
+	line-height: 78px;
+	margin: 0;
+}
+.breadcrumbs-link{
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 16px;
+	line-height: 21px;
+}
+.breadcrumbs{
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+.breadcrnmbs-item{
+	margin-right: 11px;
+}
+.fieldset-box{
+	display: flex;
+	width: 150px;
+	padding: 0;
+	border: 0;
+	margin: 0;
+	margin-right: 67px;
+}
+.fieldset-box:nth-child(2){
+	margin-right: 167px;
+}
+.fieldset-box-filter{
+	display: flex;
+	flex-wrap: wrap;
+	width: 287px;
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+.form-filter{
+	display: flex;
+	margin-top: 45px;
+}
+.form-list{
+	padding: 0;
+	margin: 0;
+	margin-top: 30px;
+}
+.form-imput-box{
+	display: flex;
+    flex-direction: column;
+    margin-left: 81px;
+}
+.form-filter-legend{
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 26px;
+}
+.form-sorting{
+	display: flex;
+	align-items: center;
+	padding: 0 71px;
+	margin-bottom: 53px;
+}
+.button-link-tile{
+	padding: 0;
+    width: 48px;
+    height: 48px;
+    background-color: white;
+	border: 2px solid #E6E6E6;
+    border-radius: 4px;
+	margin-right: 8px;
+}
+.button-link-tile:nth-child(3n){
+	margin-right: 0;
+}
+
+.form-sorting-text{
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 39px;
+	text-transform: uppercase;
+	color: #000000;
+	margin: 0;
+	margin-right: 192px;
+}
+.select-sorting{
+	width: 287px;
+	height: 48px;
+	border: 2px solid #E6E6E6;
+	border-radius: 4px;
+	font-size: 18px;
+	line-height: 23px;
+	margin-right: 81px;
+}
+.form-sorting-button{
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 160px;
+}
+.input-price{
+	box-sizing: border-box;
+	border: 2px solid #FFFFFF;
+	border-radius: 4px;
+	background-color: transparent;
+	width: 143px;
+	height: 48px;
+	margin-top: 34px;
+}
+.product-cards-link{
+	text-decoration: none;
+	color: #000000;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 31px;
+}
+.product-card-terms, .product-card-definition{
+	line-height: 23px;
+}
+.rating-text{
+	background-color: #F2F2F2;
+	border-radius: 4px;
+	border: 0;
+	font-size: 16px;
+	line-height: 21px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.label-select-card{
+	line-height: 23px;
+}
+.select-card{
+	width: 160px;
+	height: 48px;
+	border-color: #E6E6E6;
+	border-radius: 4px;
+}
+.box-card-product{
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 18px;
+}
+.pagination-box{
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+	margin-bottom: 73px;
+}
+.pagination-list{
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+.pagination-item{
+	margin-right: 8px;
+}
+.pagination-item:last-child{
+	margin-right: 0;
+}
+	/*Основная часть Котолог офф*/
+
+	/*Основная часть Главная страница старт*/	
+
+.wrepper-width{
+	width: 1200px;
+	margin: 0 auto;
+}
+.logo-index{
+	margin-bottom: 63px;
+	box-sizing: border-box;
+	padding-top: 51px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	Width: 1200px;
+	min-height: 485px;
+	background: 
+	url("../image/Vektor/main/Vector-new.svg")  0% bottom no-repeat,
+	url("../image/Rast/index-background-new.jpg") no-repeat;
+}
+.wrepper-main-text{
+	width: 1200px;
+	background-color: #ffffff;
+	text-align: center;
+}
+.main-text{
+	margin: 0 auto 31px;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 36px;
+	text-transform: uppercase;
+	color: #000000;
+	max-width: 720px;
+}
+.main-text-2{
+	margin: auto;
+	margin-bottom: 80px;
+	font-size: 22px;
+	line-height: 36px;
+	max-width: 720px;
+}
+
+
+/*Преимущества*/
+.advantages{
+	margin-bottom: 91px;
+}
+.advantages-list{
+	padding: 0;
+	margin: 0;
+}
+.advantages-time{
+	display: flex;
+	flex-wrap: wrap;
+}
+.advantages-spisoc{
+	display: flex;
+	margin: 0;
+}
+.advantages-description{
+	max-width: 250px;
+	margin: 0;
+}
+.wrapper{
+	box-sizing: border-box;
+	padding-top: 98px;
+	width: 400px;
+	min-height: 384px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.wrapper-11{
+	background-color: #83B3D3;
+	color: #ffffff;
+}
+.wrapper-1{
+	background-color: rgba(131, 179, 211, 0.12);
+	padding-top: 90px;
+}
+.wrapper-2{
+	background-color: rgba(131, 179, 211, 0.2);
+}
+.wrapper-3{
+	padding-top: 90px;
+	background-color: #ffffff;
+}
+.advantages-title{
+	justify-self: flex-start;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 30px;
+	max-width: 180px;
+}
+.advantages-title-1{
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 23px;
+	margin-bottom: 20px;
+}
+.advantages-span{
+	margin-bottom: 30px;
+}
+.advantages-description{
+	text-align: center;
+}
+/*Преимущества*/
+
+/*Сервис и рассылка*/
+.services{
+	background-color: #ffffff;
+	width: 1200px;
+	text-align: center;
+	margin-bottom: 93px;
+}
+.services-title{
+	margin-top: 0;
+	margin-bottom: 29px;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 36px;
+	text-transform: uppercase;
+	color: #000000;
+}
+.services-text{
+	font-size: 22px;
+	line-height: 26px;
+	margin-bottom: 56px;
+}
+.spam{
+	padding-top: 94px;
+	box-sizing: border-box;
+	background-image: url("../image/Rast/background-spam-new.jpg");
+	Width: 1200px;
+	min-height: 411px;
+	color: #ffffff;
+	text-align: center;
+	vertical-align: bottom;
+}
+.spam-catalog{
+	box-sizing: border-box;
+	Width: 1200px;
+	text-align: center;
+	vertical-align: bottom;
+	color: #000000;
+}
+.spam-title-catalog{
+	margin-top: 0;
+	margin-bottom: 46px;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 36px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.spam-title{
+	margin-top: 0;
+	margin-bottom: 29px;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 36px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.spam-text{
+	margin-bottom: 46px;
+	font-size: 22px;
+	line-height: 26px;
+	text-align: center;
+}
+.spam-text-catalog{
+	color: #333333;
+	margin-bottom: 46px;
+	font-size: 22px;
+	line-height: 26px;
+	text-align: center;
+}
+.services-button{
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 36px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+
+	width: 575px;
+	height: 60px;
+	background: #756257;
+	border-radius: 10px;
+	border: 0;
+}
+.spam-form{
+	display: flex;
+    justify-content: center;
+	margin-bottom: 141px;
+}
+.form-email{
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 26px;	
+
+	height: 60px;
+	width: 600px;
+	background-color: #F2F2F2;
+	border-radius: 10px 0px 0px 10px;
+	border: 0;
+}
+.form-button{
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 26px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+
+	width: 200px;
+	background-color: #83B3D3;
+	border-radius: 0px 10px 10px 0px;
+	border: 0;
+}
+/*Сервис и рассылка*/
+
+/*Основная часть Главная страница офф*/
+
+
+
+/*Подвал*/
+.footer-navigstions{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 120px;
+	padding: 0 72px;
+}
+.footer-list{
+	padding: 0;
+	margin-top: 10px;
+	width: 120px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.footer-tel{
+	width: 720px;
+}
+.footer-index{
+	background-color: #ffffff;
+}
+.footer-tel{
+	font-size: 40px;
+	line-height: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #000000;
+}
+.footer-time{
+	width: 20px;
+	height: 20px;
+	padding-right: 29px;
+	padding-top: 8px;
+}
+.footer-time:nth-child(3n){
+	padding-right: 0;
+}
+/*Подвал*/
