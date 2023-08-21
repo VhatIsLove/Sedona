@@ -51,6 +51,7 @@ ul, ol{
 	z-index: 1;
 }
 .navigation-link{
+	position: relative;
 	display: block;
 	font-weight: 700;
 	font-size: 20px;
@@ -59,6 +60,13 @@ ul, ol{
 	text-decoration: none;
 	padding: 20px 17px;
 }
+.navigation-link:hover{
+	color: #756257;
+}
+.navigation-link:active{
+	color:rgba(117, 98, 87, 0.3);
+}
+
 .header-wrapper{
 	display: flex;
 	align-items: center;
@@ -87,12 +95,40 @@ ul, ol{
 	width: 264px;
 }
 .nav-user{
-	padding: 24px 12px;
-	min-width: 18px;
-	min-height: 17px;
+	box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    padding: 24px 12px;
+    min-height: 66px;
+    min-width: 42px;
 }
 .navigation-menu-button{
 	margin-left: auto;
+}
+.navigation-icon{
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.nav-user:hover .header-navigation-icon{
+	fill: #756257;
+}
+.nav-user:active .header-navigation-icon{
+	fill: rgba(117, 98, 87, 0.3);
+}
+.active-page::before{
+	content: '';
+	background-color: #756257;
+	height: 3px;
+	position: absolute;
+	bottom: 0;
+	right: 17px;
+	left: 17px;
+	transition: 0.3s;
+
 }
 /* Шапка финиш*/
 
@@ -103,6 +139,7 @@ ul, ol{
 	color: #ffffff;
 	border-radius: 4px;
 	border: 0;
+	cursor: pointer;
 }
 .button-header{
 	display: block;
@@ -116,6 +153,20 @@ ul, ol{
 	padding: 8px 15px;
 	box-sizing: border-box;
 }
+.button-header:hover{
+	box-shadow: 5px 5px 3px 0 #4d3428 ;
+	background-color: #615048;
+}
+.button-header:focus{
+	outline: none;
+	box-shadow: inset 0 0 0 3px #83B3D3;
+	background: #615048;
+}
+.button-header:active{
+	box-shadow: 5px 5px 3px 0 #887871;
+	background: #615048;
+	color: rgba(255, 255, 255, 0.3);
+}
 .form-submit-send{
 	width: 160px;
 	height: 48px;
@@ -123,8 +174,19 @@ ul, ol{
 	font-size: 16px;
 	line-height: 21px;
 	font-weight: 700;
-	margin-top: 60px;
 	margin-bottom: 20px;
+}
+.form-submit-send:hover{
+	background-color: #68A2CA;
+}
+.form-submit-send:focus{
+	outline: 3px solid #fff;
+	background-color: #68A2CA;
+}
+.form-submit-send:active{
+	outline: none;
+	background-color: #68A2CA;
+	color: rgba(255, 255, 255, 0.3);
 }
 .form-submit-reset{
 	font-size: 18px;
@@ -132,6 +194,19 @@ ul, ol{
 	background-color: transparent;
 	color: #FFFFFF;
 	border: 0;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.form-submit-reset:hover{
+	color: rgba(255, 255, 255, 0.6);
+}
+.form-submit-reset:focus{
+	color: #fff;
+	outline: 3px solid #83B3D3;
+}
+.form-submit-reset:active{
+	color: rgba(255, 255, 255, 0.3);
+	outline: none;
 }
 .product-card-button-link{
 	display: block;
@@ -145,6 +220,19 @@ ul, ol{
 	text-decoration: none;
 	padding: 9px;
 }
+.product-card-button-link:hover{
+	background-color: #615048;
+}
+.product-card-button-link:focus{
+	outline: none;
+	box-shadow: 0 0 0 3px #83B3D3;
+	background-color: #615048;
+}
+.product-card-button-link:active{
+	box-shadow: none;
+	background-color: #615048;
+	color: rgba(255, 255, 255, 0.3);
+}
 .product-card-button{
 	background-color: #83B3D3;
 	width: 141px;
@@ -154,6 +242,20 @@ ul, ol{
 	line-height: 21px;
 	justify-self: end;
 }
+.product-card-button:hover{
+	background-color: #68A2CA;
+	outline: 1px solid #756257;
+}
+.product-card-button:focus{
+	background-color: #68A2CA;
+	outline: 3px solid #756257;
+}
+.product-card-button:active{
+	background-color: #68A2CA;
+	outline: 1px solid #756257;
+	color: rgba(255, 255, 255, 0.3);
+	transition: 0.1s;
+}
 .product-card-button-green{
 	background-color: #7DB54F;
 	width: 141px;
@@ -162,6 +264,19 @@ ul, ol{
 	font-size: 16px;
 	line-height: 21px;
 	justify-self: end;
+}
+.product-card-button-green:hover{
+	background-color: #6C9E42;
+}
+.product-card-button-green:focus{
+	background-color: #6C9E42;
+	outline: 3px solid #756257;
+}
+.product-card-button-green:active{
+	background-color: #6C9E42;
+	color: rgba(255, 255, 255, 0.3);
+	outline: none;
+	transition: 0.1s;
 }
 .section-product-card-button{
 	height: 60px;
@@ -173,6 +288,18 @@ ul, ol{
 	margin-left: 290px;
 	margin-bottom: 60px;
 }
+.section-product-card-button:hover{
+	background-color: #68A2CA;
+}
+.section-product-card-button:focus{
+	outline: 3px solid #756257;
+	background-color: #68A2CA;
+}
+.section-product-card-button:active{
+	color: rgba(255, 255, 255, 0.3);
+	background-color: #68A2CA;
+	outline: none;
+}
 .pagination-link{
 	text-decoration: none;
 	background-color: #83B3D3;
@@ -182,7 +309,106 @@ ul, ol{
 	align-items: center;
 	justify-content: center;
 }
+.activ{
+	background-color: #F2F2F2;
+	color: #000000;
+}
+.pagination-link:hover:not(.activ){
+	background-color: #68A2CA;
+}
+.pagination-link:focus:not(.activ){
+	outline: none;
+	box-shadow: 0 0 0 3px #756257;
+	background-color: #68A2CA;
+}
+.pagination-link:active:not(.activ){
+	background-color: #68A2CA;
+	color: rgba(255, 255, 255, 0.3);
+	box-shadow: none;
+}
+.activ:focus{
+	outline: none;
+	box-shadow: 0 0 0 3px #756257
+}
+.services-button{
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 36px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	cursor: pointer;
 
+	width: 575px;
+	height: 60px;
+	background: #756257;
+	border-radius: 10px;
+	border: 0;
+}
+.services-button:hover{
+	box-shadow: 5px 5px 3px 0 #4d3428;
+	background-color: #615048;
+}
+.services-button:focus{
+	outline: none;
+	box-shadow: inset 0 0 0 3px #83B3D3;
+	background: #615048;
+}
+.services-button:active{
+	color: rgba(255, 255, 255, 0.3);
+	box-shadow: 5px 5px 3px 0 #887871;
+	background-color: #615048;
+}
+.form-button{
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 26px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+
+	width: 200px;
+	background-color: #83B3D3;
+	border-radius: 0px 10px 10px 0px;
+	border: 0;
+}
+.form-button:hover{
+	background-color: #68A2CA;
+}
+.form-button:focus{
+	outline: 3px solid #756257;
+	background-color: #68A2CA;
+}
+.form-button:active{
+	color: rgba(255, 255, 255, 0.3);
+	background-color: #68A2CA;
+	outline: none;
+}
+.button-link-tile{
+	padding: 0;
+    width: 48px;
+    height: 48px;
+    background-color: white;
+	border: 2px solid #E6E6E6;
+    border-radius: 4px;
+	margin-right: 8px;
+}
+.button-link-tile:nth-child(3n){
+	margin-right: 0;
+}
+.button-link-tile:hover,
+.button-link-tile:focus{
+	outline: none;
+	border: 2px solid #83B3D3;
+}
+.button-link-tile:active{
+	border: 2px solid #000000;
+	box-shadow: 0 0 10px 0 #333333;
+	background-color: #E6E6E6;
+}
+.active-sorting{
+	border-color: #000000;
+}
 /* Кнопки финиш*/
 
 
@@ -211,6 +437,28 @@ ul, ol{
 	color: #FFFFFF;
 	font-size: 16px;
 	line-height: 21px;
+	padding: 5px;
+	border-radius: 4px;
+}
+.breadcrumbs-link:hover{
+	color: rgba(255, 255, 255, 0.6);
+}
+.breadcrumbs-link:focus{
+	outline: 3px solid #68A2CA;
+	color: #fff;
+}
+.breadcrumbs-link:active{
+	outline: none;
+	color: rgba(255, 255, 255, 0.3);
+}
+.breadcrumbs-home-icon{
+	fill: #fff;
+}
+.breadcrumbs-link:hover .breadcrumbs-home-icon{
+	fill: rgba(255, 255, 255, 0.6);
+}
+.breadcrumbs-link:active .breadcrumbs-home-icon{
+	fill: rgba(255, 255, 255, 0.3);
 }
 .breadcrumbs{
 	display: flex;
@@ -220,6 +468,10 @@ ul, ol{
 }
 .breadcrnmbs-item{
 	margin-right: 11px;
+}
+.checkbox-input{
+	width: 10px;
+	height: auto;
 }
 .fieldset-box{
 	display: flex;
@@ -239,6 +491,7 @@ ul, ol{
 	padding: 0;
 	border: 0;
 	margin: 0;
+	margin-right: 81px;
 }
 .form-filter{
 	display: flex;
@@ -252,7 +505,7 @@ ul, ol{
 .form-imput-box{
 	display: flex;
     flex-direction: column;
-    margin-left: 81px;
+	padding-top: 60px;
 }
 .form-filter-legend{
 	font-weight: 700;
@@ -265,19 +518,6 @@ ul, ol{
 	padding: 0 71px;
 	margin-bottom: 53px;
 }
-.button-link-tile{
-	padding: 0;
-    width: 48px;
-    height: 48px;
-    background-color: white;
-	border: 2px solid #E6E6E6;
-    border-radius: 4px;
-	margin-right: 8px;
-}
-.button-link-tile:nth-child(3n){
-	margin-right: 0;
-}
-
 .form-sorting-text{
 	font-weight: 700;
 	font-size: 30px;
@@ -296,6 +536,17 @@ ul, ol{
 	line-height: 23px;
 	margin-right: 81px;
 }
+.select-sorting:hover,
+.select-sorting:focus{
+	outline: none;
+	border: 2px solid #83B3D3;
+}
+.select-sorting:active{
+	color: #333;
+	border: 2px solid #000000;
+	box-shadow: 0 0 10px 0 #333333;
+	background-color: #E6E6E6;
+}
 .form-sorting-button{
 	display: flex;
 	flex-wrap: wrap;
@@ -304,12 +555,30 @@ ul, ol{
 .input-price{
 	box-sizing: border-box;
 	border: 2px solid #FFFFFF;
+	color: #fff;
 	border-radius: 4px;
 	background-color: transparent;
 	width: 143px;
 	height: 48px;
 	margin-top: 34px;
+	padding: 14px 19px;
 }
+.input-price:hover{
+	border: 2px solid rgba(255, 255, 255, 0.6);
+}
+.input-price:focus{
+	outline: none;
+	border: 2px solid #fff;
+	box-shadow: 
+	inset 0 0 0 3px #81B3D2;
+}
+.input-price:active{
+	border: 2px solid #fff;
+	background-color: #75625793;
+	box-shadow: none;
+	color: white;
+}
+/* карточки товара старт */
 .product-cards-link-img{
 	grid-column: 1/-1;
 }
@@ -356,15 +625,6 @@ ul, ol{
 .star-reyting:first-child{
 	margin: 0;
 }
-.label-select-card{
-	line-height: 23px;
-}
-.select-card{
-	width: 160px;
-	height: 48px;
-	border-color: #E6E6E6;
-	border-radius: 4px;
-}
 .box-card-product{
 	display: grid;
 	grid-template-columns: repeat(3, 340px);
@@ -384,6 +644,13 @@ ul, ol{
 	padding: 20px;
 	row-gap: 16px;
 }
+/* карточки товара офф */
+hr{
+	width: 1055px;
+	border-color: rgba(255, 255, 255, 0.3);
+	position: relative;
+	bottom: 30px;
+}
 .pagination-list{
 	display: flex;
 	padding: 0;
@@ -394,6 +661,25 @@ ul, ol{
 }
 .pagination-item:last-child{
 	margin-right: 0;
+}
+.label-select-card{
+	line-height: 23px;
+}
+.select-card{
+	width: 160px;
+	height: 48px;
+	border-color: #E6E6E6;
+	border-radius: 4px;
+}
+.select-card:hover,
+.select-card:focus{
+	outline: 2px solid #83B3D3;
+}
+.select-card:active{
+	color: #333;
+	outline: 2px solid #000000;
+	box-shadow: 0 0 10px 0 #333333;
+	background-color: #E6E6E6;
 }
 	/*Основная часть Котолог офф*/
 
@@ -480,6 +766,12 @@ ul, ol{
     height: 0;
     min-height: 100%;
     object-fit: cover;
+}
+.img:hover{
+	opacity: 0.6;
+}
+.img:active{
+	opacity: 0.3;
 }
 .wrapper{
 	box-sizing: border-box;
@@ -602,20 +894,6 @@ ul, ol{
 	line-height: 26px;
 	text-align: center;
 }
-.services-button{
-	font-weight: 700;
-	font-size: 20px;
-	line-height: 36px;
-	text-align: center;
-	text-transform: uppercase;
-	color: #FFFFFF;
-
-	width: 575px;
-	height: 60px;
-	background: #756257;
-	border-radius: 10px;
-	border: 0;
-}
 .spam-form{
 	display: flex;
     justify-content: center;
@@ -632,19 +910,20 @@ ul, ol{
 	border-radius: 10px 0px 0px 10px;
 	border: 0;
 }
-.form-button{
-	font-weight: 700;
-	font-size: 20px;
-	line-height: 26px;
-	text-align: center;
-	text-transform: uppercase;
-	color: #FFFFFF;
-
-	width: 200px;
-	background-color: #83B3D3;
-	border-radius: 0px 10px 10px 0px;
-	border: 0;
+.form-email:hover{
+	background-color: #E6E6E6;
 }
+.form-email:focus{
+	outline: none;
+	background-color: #E6E6E6;
+	box-shadow: 0 0 0 3px #83B3D3;
+}
+.form-email:invalid{
+	outline: none;
+	box-shadow: 0 0 0 2px #FF5757;
+	background-color: #fff;
+}
+
 /*Сервис и рассылка*/
 
 /*Основная часть Главная страница офф*/
@@ -662,7 +941,7 @@ ul, ol{
 .footer-list{
 	padding: 0;
 	margin-top: 10px;
-	width: 120px;
+	width: 150px;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -672,6 +951,10 @@ ul, ol{
 .footer-index{
 	background-color: #ffffff;
 }
+.footer-tel-link{
+	text-decoration: none;
+	padding: 15px;
+}
 .footer-tel{
 	font-size: 40px;
 	line-height: 40px;
@@ -679,13 +962,70 @@ ul, ol{
 	text-transform: uppercase;
 	color: #000000;
 }
+.footer-tel-link:hover{
+	color: #756257;
+}
+.footer-tel-link:focus{
+	outline: none;
+	color: #756257;
+	border: 3px solid #83B3D3;
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+.footer-tel-link:active{
+	border: 0;
+	color: rgba(117, 98, 87, 0.3);
+}
+.footer-link-social{
+	border-radius: 10px;
+	min-width: 20px;
+	min-height: 20px;
+	padding: 10px;
+	display: block;
+	box-sizing: border-box;
+}
+.footer-social-icon{
+	fill: #83B3D3;
+}
+.footer-link-social:hover .footer-social-icon{
+	fill: #68A2CA;
+}
+.footer-link-social:focus .footer-social-icon{
+	outline: none;
+	fill: #68A2CA;
+}
+.footer-link-social:focus{
+	outline: 3px solid #68A2CA;
+}
+.footer-link-social:active .footer-social-icon{
+	fill: rgba(104, 162, 202, 0.3);
+}
+.footer-link-social:active{
+	outline: none;
+}
 .footer-time{
-	width: 20px;
-	height: 20px;
-	padding-right: 29px;
+	padding-right: 9px;
 	padding-top: 8px;
 }
 .footer-time:nth-child(3n){
 	padding-right: 0;
 }
+.fot-log-HA{
+	padding: 10px;
+}
+.fot-link-HA{
+	border-radius: 10px;
+}
+.fot-link-HA:hover .fot-log-HA{
+	fill: #756257;
+}
+.fot-link-HA:focus .fot-log-HA{
+	outline: none;
+	fill: #756257;
+}
+.fot-link-HA:focus{
+	outline: none;
+	box-shadow: 0 0 0 3px #68A2CA;
+}
+
 /*Подвал*/
