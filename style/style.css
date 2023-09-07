@@ -61,7 +61,7 @@ ul, ol{
     font-size: 32px;
     align-self: end;
     background: linear-gradient(45deg, #b74502de 33%, #d4e10ff2 66%, #8AA9D6);
-    -webkit-background-clip: text;
+    -webkit-background-cli: text;
     -webkit-text-fill-color: transparent;
     justify-self: center;
 	box-shadow: 0 0 4px 2px #BF9130 inset;
