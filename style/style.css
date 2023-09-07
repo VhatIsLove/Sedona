@@ -12,10 +12,19 @@
 	src: url("../fonts/PTSans-700.woff2") format("woff2");
 	font-display: swap;
 }
+@font-face{
+	font-family: "Kings";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../fonts/Kings-Regular.woff2") format("woff2");
+	font-display: swap;
+}
 html {
 	box-sizing: border-box;
 	height: 100%;
-
+}
+a{
+	text-decoration: none;
 }
 body{
 	box-sizing: border-box;
@@ -45,10 +54,39 @@ ul, ol{
 }
 
 /* Шапка старт*/
+.text-logo{
+	font-family: "Kings";
+	padding-top: 5px;
+    font-family: "Kings";
+    font-size: 32px;
+    align-self: end;
+    background: linear-gradient(45deg, #b74502de 33%, #d4e10ff2 66%, #8AA9D6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    justify-self: center;
+	box-shadow: 0 0 4px 2px #BF9130 inset;
+}
 .logo-link{
-	margin-bottom: -8px;
 	margin-right: auto;
 	z-index: 1;
+	display: grid;
+    grid-template-columns: 80px 175px;
+    grid-template-rows: 36px 36px;
+	margin-right: 20px;
+}
+.logo-header{
+	grid-row: 1/3;
+    grid-column: 1/2;
+    justify-self: start;
+}
+.logo-p{
+	color: #000;
+    margin: 0;
+    grid-row: 2/3;
+    grid-column: 1/3;
+    font-size: 16px;
+    justify-self: end;
+    align-self: center;
 }
 .navigation-link{
 	position: relative;
@@ -70,7 +108,7 @@ ul, ol{
 .header-wrapper{
 	display: flex;
 	align-items: center;
-	width: 1060px;
+	width: 1080px;
 	margin: 0 auto;
 }
 .navigation{
@@ -84,7 +122,7 @@ ul, ol{
 	padding-left: 0;
 	margin: 0;
 	margin-right: auto;
-	width: 345px;
+	max-width: 460px;
 }
 .navigation-header-user{
 	display: flex;
@@ -143,7 +181,7 @@ ul, ol{
 }
 .button-header{
 	display: block;
-	background-color: #756257;
+	background-color: #A66C00;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 20px;
@@ -154,64 +192,63 @@ ul, ol{
 	box-sizing: border-box;
 }
 .button-header:hover{
-	box-shadow: 5px 5px 3px 0 #4d3428 ;
-	background-color: #615048;
+	box-shadow: 0 0 5px 5px #926f3b;
+	background-color: #bb7b05d7;
 }
 .button-header:focus{
 	outline: none;
-	box-shadow: inset 0 0 0 3px #83B3D3;
-	background: #615048;
+	box-shadow: inset 0 0 0 3px #613002;
+	background: #865803d7;
 }
 .button-header:active{
-	box-shadow: 5px 5px 3px 0 #887871;
-	background: #615048;
+	box-shadow: 0 0 5px 5px #5e4726;
+	background-color: #865803d7;
 	color: rgba(255, 255, 255, 0.3);
 }
 .form-submit-send{
 	width: 160px;
 	height: 48px;
-	background-color: #83B3D3;
+	background-color: #A66C00;
 	font-size: 16px;
 	line-height: 21px;
 	font-weight: 700;
 	margin-bottom: 20px;
 }
 .form-submit-send:hover{
-	background-color: #68A2CA;
+	background-color: #bb7b05d7;
 }
 .form-submit-send:focus{
-	outline: 3px solid #fff;
-	background-color: #68A2CA;
+	outline: 3px solid #613002;
+	background-color: #865803d7;
 }
 .form-submit-send:active{
 	outline: none;
-	background-color: #68A2CA;
+	background-color: #865803d7;
 	color: rgba(255, 255, 255, 0.3);
 }
 .form-submit-reset{
+	width: 160px;
+	height: 48px;
 	font-size: 18px;
 	line-height: 23px;
 	background-color: transparent;
-	color: #FFFFFF;
-	border: 0;
-	border-radius: 4px;
-	cursor: pointer;
 }
 .form-submit-reset:hover{
-	color: rgba(255, 255, 255, 0.6);
+	background-color: #bb7b05ab;
 }
 .form-submit-reset:focus{
-	color: #fff;
-	outline: 3px solid #83B3D3;
+	outline: 3px solid #613002;
+	background-color: #865803b6;
 }
 .form-submit-reset:active{
 	color: rgba(255, 255, 255, 0.3);
+	background-color: #865803b6;
 	outline: none;
 }
 .product-card-button-link{
 	display: block;
 	box-sizing: border-box;
-	background-color: #756257;
+	background-color: #A66C00;
 	width: 133px;
 	height: 37px;
 	font-weight: 700;
@@ -221,20 +258,21 @@ ul, ol{
 	padding: 9px;
 }
 .product-card-button-link:hover{
-	background-color: #615048;
+	background-color: #bb7b05d7;
 }
 .product-card-button-link:focus{
 	outline: none;
-	box-shadow: 0 0 0 3px #83B3D3;
-	background-color: #615048;
+	box-shadow: 0 0 0 3px #613002;
+	background-color: #865803d7;
 }
 .product-card-button-link:active{
 	box-shadow: none;
-	background-color: #615048;
+	background-color: #865803d7;
 	color: rgba(255, 255, 255, 0.3);
 }
 .product-card-button{
-	background-color: #83B3D3;
+	background-color: #e9d855;
+	color: #000;
 	width: 141px;
 	height: 37px;
 	font-weight: 700;
@@ -243,17 +281,17 @@ ul, ol{
 	justify-self: end;
 }
 .product-card-button:hover{
-	background-color: #68A2CA;
+	background-color: #ccb503dc;
 	outline: 1px solid #756257;
 }
 .product-card-button:focus{
-	background-color: #68A2CA;
+	background-color: #e7cc00dc;
 	outline: 3px solid #756257;
 }
 .product-card-button:active{
-	background-color: #68A2CA;
+	background-color: #e7cc00dc;
 	outline: 1px solid #756257;
-	color: rgba(255, 255, 255, 0.3);
+	color: rgba(0, 0, 0, 0.3);
 	transition: 0.1s;
 }
 .product-card-button-green{
@@ -278,31 +316,9 @@ ul, ol{
 	outline: none;
 	transition: 0.1s;
 }
-.section-product-card-button{
-	height: 60px;
-	width: 620px;
-	background-color: #83B3D3;
-	font-weight: 700;
-	font-size: 20px;
-	line-height: 26px;
-	margin-left: 290px;
-	margin-bottom: 60px;
-}
-.section-product-card-button:hover{
-	background-color: #68A2CA;
-}
-.section-product-card-button:focus{
-	outline: 3px solid #756257;
-	background-color: #68A2CA;
-}
-.section-product-card-button:active{
-	color: rgba(255, 255, 255, 0.3);
-	background-color: #68A2CA;
-	outline: none;
-}
 .pagination-link{
 	text-decoration: none;
-	background-color: #83B3D3;
+	background-color: #A66C00;
 	display: flex;
 	width: 55px;
 	height: 55px;
@@ -314,15 +330,15 @@ ul, ol{
 	color: #000000;
 }
 .pagination-link:hover:not(.activ){
-	background-color: #68A2CA;
+	background-color: #bb7b05d7;
 }
 .pagination-link:focus:not(.activ){
 	outline: none;
-	box-shadow: 0 0 0 3px #756257;
-	background-color: #68A2CA;
+	box-shadow: 0 0 0 3px #613002;
+	background-color: #865803d7;
 }
 .pagination-link:active:not(.activ){
-	background-color: #68A2CA;
+	background-color: #865803d7;
 	color: rgba(255, 255, 255, 0.3);
 	box-shadow: none;
 }
@@ -330,34 +346,31 @@ ul, ol{
 	outline: none;
 	box-shadow: 0 0 0 3px #756257
 }
-.services-button{
+.big-button{
+	display: block;
+	margin: auto;
 	font-weight: 700;
 	font-size: 20px;
 	line-height: 36px;
-	text-align: center;
-	text-transform: uppercase;
-	color: #FFFFFF;
-	cursor: pointer;
 
 	width: 575px;
 	height: 60px;
-	background: #756257;
+	background: #A66C00;
 	border-radius: 10px;
-	border: 0;
 }
-.services-button:hover{
-	box-shadow: 5px 5px 3px 0 #4d3428;
-	background-color: #615048;
+.big-button:hover{
+	box-shadow: 0 0 5px 5px #926f3b;
+	background-color: #bb7b05d7;
 }
-.services-button:focus{
+.big-button:focus{
 	outline: none;
-	box-shadow: inset 0 0 0 3px #83B3D3;
-	background: #615048;
+	box-shadow: inset 0 0 0 3px #613002;
+	background: #865803d7;
 }
-.services-button:active{
+.big-button:active{
+	box-shadow: 0 0 5px 5px #5e4726;
+	background-color: #865803d7;
 	color: rgba(255, 255, 255, 0.3);
-	box-shadow: 5px 5px 3px 0 #887871;
-	background-color: #615048;
 }
 .form-button{
 	font-weight: 700;
@@ -368,20 +381,20 @@ ul, ol{
 	color: #FFFFFF;
 
 	width: 200px;
-	background-color: #83B3D3;
+	background-color: transparent;
 	border-radius: 0px 10px 10px 0px;
 	border: 0;
 }
 .form-button:hover{
-	background-color: #68A2CA;
+	background-color: #bb7b05ab;
 }
 .form-button:focus{
-	outline: 3px solid #756257;
-	background-color: #68A2CA;
+	outline: 3px solid #613002;
+	background-color: #865803b6;
 }
 .form-button:active{
 	color: rgba(255, 255, 255, 0.3);
-	background-color: #68A2CA;
+	background-color: #865803b6;
 	outline: none;
 }
 .button-link-tile{
@@ -399,7 +412,7 @@ ul, ol{
 .button-link-tile:hover,
 .button-link-tile:focus{
 	outline: none;
-	border: 2px solid #83B3D3;
+	border: 2px solid #613002;
 }
 .button-link-tile:active{
 	border: 2px solid #000000;
@@ -525,7 +538,7 @@ ul, ol{
 	text-transform: uppercase;
 	color: #000000;
 	margin: 0;
-	margin-right: 192px;
+	margin-right: 185px;
 }
 .select-sorting{
 	width: 287px;
@@ -539,7 +552,7 @@ ul, ol{
 .select-sorting:hover,
 .select-sorting:focus{
 	outline: none;
-	border: 2px solid #83B3D3;
+	border: 2px solid #613002;
 }
 .select-sorting:active{
 	color: #333;
@@ -550,7 +563,7 @@ ul, ol{
 .form-sorting-button{
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 160px;
+	width: 165px;
 }
 .input-price{
 	box-sizing: border-box;
@@ -601,6 +614,9 @@ ul, ol{
 .product-card-terms, .product-card-definition{
 	line-height: 23px;
 }
+.product-card-definition{
+	margin-left: auto;
+}
 .reyting{
 	grid-column: 1/-1;
 	display: flex;
@@ -648,8 +664,9 @@ ul, ol{
 hr{
 	width: 1055px;
 	border-color: rgba(255, 255, 255, 0.3);
-	position: relative;
-	bottom: 30px;
+}
+hr~hr{
+	margin-bottom: 65px;
 }
 .pagination-list{
 	display: flex;
@@ -673,13 +690,22 @@ hr{
 }
 .select-card:hover,
 .select-card:focus{
-	outline: 2px solid #83B3D3;
+	outline: 2px solid #613002;
 }
 .select-card:active{
 	color: #333;
 	outline: 2px solid #000000;
 	box-shadow: 0 0 10px 0 #333333;
 	background-color: #E6E6E6;
+}
+.img{
+    width: 100%;
+    height: 0;
+    min-height: 100%;
+    object-fit: cover;
+}
+a .img:hover{
+	opacity: 0.6;
 }
 	/*Основная часть Котолог офф*/
 
@@ -700,7 +726,7 @@ hr{
 	min-height: 485px;
 	background: 
 	url("../image/Vektor/main/Vector-new.svg")  0% bottom no-repeat,
-	url("../image/Rast/index-background-new.jpg") no-repeat;
+	url("../image/Rast/fon-2-new.jpg") no-repeat;
 }
 .wrepper-main-text{
 	width: 1200px;
@@ -761,20 +787,10 @@ hr{
 .img-adventages-2{
 	grid-column: 1/3;
 }
-.img{
-    width: 100%;
-    height: 0;
-    min-height: 100%;
-    object-fit: cover;
-}
-.img:hover{
-	opacity: 0.6;
-}
-.img:active{
-	opacity: 0.3;
-}
 .wrapper{
 	box-sizing: border-box;
+	background-color: #A66C00;
+	color: #fff;
 	padding-top: 98px;
 	width: 400px;
 	min-height: 384px;
@@ -782,20 +798,15 @@ hr{
 	flex-direction: column;
 	align-items: center;
 }
-.wrapper-11{
-	background-color: #83B3D3;
-	color: #ffffff;
-}
 .wrapper-1{
-	background-color: rgba(131, 179, 211, 0.12);
+	background-color: #ffa500a1;
+	color: #000;
 	padding-top: 90px;
 }
 .wrapper-2{
-	background-color: rgba(131, 179, 211, 0.2);
-}
-.wrapper-3{
 	padding-top: 90px;
-	background-color: #ffffff;
+	background-color: #bfb43082;
+	color: #000;
 }
 .advantages-title{
 	justify-self: flex-start;
@@ -847,9 +858,10 @@ hr{
 	margin-bottom: 56px;
 }
 .spam{
-	padding-top: 94px;
+	padding-top: 80px;
 	box-sizing: border-box;
-	background-image: url("../image/Rast/background-spam-new.jpg");
+	background: url("../image/Rast/sedona_canyon_land_landscape.jpg") no-repeat;
+	background-size: 100%;
 	Width: 1200px;
 	min-height: 411px;
 	color: #ffffff;
@@ -858,10 +870,13 @@ hr{
 }
 .spam-catalog{
 	box-sizing: border-box;
+	background: url("../image/Rast/fon-spam-catalog.jpg") no-repeat;
+	background-size: 100%;
 	Width: 1200px;
 	text-align: center;
 	vertical-align: bottom;
-	color: #000000;
+	color: #fff;
+	padding: 100px 0;
 }
 .spam-title-catalog{
 	margin-top: 0;
@@ -888,7 +903,6 @@ hr{
 	text-align: center;
 }
 .spam-text-catalog{
-	color: #333333;
 	margin-bottom: 46px;
 	font-size: 22px;
 	line-height: 26px;
@@ -897,7 +911,6 @@ hr{
 .spam-form{
 	display: flex;
     justify-content: center;
-	margin-bottom: 141px;
 }
 .form-email{
 	font-weight: 400;
@@ -916,7 +929,7 @@ hr{
 .form-email:focus{
 	outline: none;
 	background-color: #E6E6E6;
-	box-shadow: 0 0 0 3px #83B3D3;
+	box-shadow: 0 0 0 3px #613002;
 }
 .form-email:invalid{
 	outline: none;
@@ -931,7 +944,7 @@ hr{
 
 
 /*Подвал*/
-.footer-navigstions{
+.footer-navigations{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -945,15 +958,19 @@ hr{
 	display: flex;
 	flex-wrap: wrap;
 }
-.footer-tel{
-	width: 720px;
-}
 .footer-index{
 	background-color: #ffffff;
 }
-.footer-tel-link{
+a[href^="tel:"]{
+	font-size: 25px;
+	line-height: 32px;
 	text-decoration: none;
-	padding: 15px;
+	text-align: center;
+	color: #333;
+}
+a[href^="tel:"]:before{
+	content: "\260e";
+	margin-right: 0.5em;
 }
 .footer-tel{
 	font-size: 40px;
@@ -966,15 +983,17 @@ hr{
 	color: #756257;
 }
 .footer-tel-link:focus{
-	outline: none;
+	outline: 3px solid #613002;
 	color: #756257;
-	border: 3px solid #83B3D3;
 	border-radius: 10px;
 	box-sizing: border-box;
 }
 .footer-tel-link:active{
 	border: 0;
 	color: rgba(117, 98, 87, 0.3);
+}
+.footer-tel-link-text{
+	margin: 0;
 }
 .footer-link-social{
 	border-radius: 10px;
@@ -995,7 +1014,7 @@ hr{
 	fill: #68A2CA;
 }
 .footer-link-social:focus{
-	outline: 3px solid #68A2CA;
+	outline: 3px solid #613002;
 }
 .footer-link-social:active .footer-social-icon{
 	fill: rgba(104, 162, 202, 0.3);
@@ -1010,22 +1029,12 @@ hr{
 .footer-time:nth-child(3n){
 	padding-right: 0;
 }
-.fot-log-HA{
-	padding: 10px;
+.star-reyting{
+	fill: gold;
+	cursor: pointer;
 }
-.fot-link-HA{
-	border-radius: 10px;
+.star-reyting:hover{
+	transform: rotate(360deg);
+	transition: 0.6s;
 }
-.fot-link-HA:hover .fot-log-HA{
-	fill: #756257;
-}
-.fot-link-HA:focus .fot-log-HA{
-	outline: none;
-	fill: #756257;
-}
-.fot-link-HA:focus{
-	outline: none;
-	box-shadow: 0 0 0 3px #68A2CA;
-}
-
 /*Подвал*/
