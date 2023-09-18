@@ -47,6 +47,28 @@
                               </svg>
                             <span class="visually-hidden">Избранное</span>
                         </a>
+                        <div class="popover popover-favorites">
+                            <button class="popover-close-btn button">
+                                1
+                                <span class="visually-hidden">Закрыть</span>
+                              </button>
+                            <div class="popover-content">
+                                <h2 class="popover-title">Избранное</h2>
+                                <ul class="popover-list">
+                                    <li class="popover-list-element">
+                                        <a href="#" class="popover-cards-link"> 
+                                            <h3 class="popover-card-title">Villas at Poco Diablo</h3>
+                                        </a>
+                                        <span class="popover-text"> Гостиница</span>
+                                        <span class="popover-price"> От 2000 ₽</span>
+                                        <button class="button btn-delete" type="button">
+                                            <img src="image/Vektor/header/popover-delete-icon.svg" alt="Удалить" width="17px" height="auto">
+                                            <span class="visually-hidden">Удалить из избранного</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </li>
                     <li class="navigation-menu-button">
                         <a href="#" class="button button-header" >Хочу сюда!</a>
@@ -80,7 +102,7 @@
 
                         <div class="wrapper">
                             <h3 class="advantages-title">Настоящий городок</h3>
-                            <span class="advantages-span">-№1-</span>
+                            <p class="advantages-description">-№1-</p>
                             <p class="advantages-description">
                             Седона — не аттракцион 
                             для туристов, там течёт 
@@ -133,7 +155,7 @@
                         <img class="img img-adventages-2" src="image/Rast/devil's-bridge.jpg" alt="Каньон в солнечную погоду" width=" 800px" height="384px">
                         <div class="wrapper">
                             <h3 class="advantages-title">Там есть мост дьявола</h3>
-                            <span class="advantages-span">-№2-</span>
+                            <p class="advantages-description">-№2-</p>
                             <p class="advantages-description">
                                 Да, по нему можно пройти!
                                 Если вы осмелитесь, 
@@ -144,7 +166,7 @@
                     <li class="advantages-time">
                         <div class="wrapper wrapper-1">
                             <h3 class="advantages-title">Небольшая площадь</h3>
-                            <span class="advantages-span">-№3-</span>
+                            <p class="advantages-description">-№3-</p>
                             <p class="advantages-description">
                             Все достопримечательности
                             находятся очень близко</p>
@@ -154,7 +176,7 @@
                     <li class="advantages-time">
                         <div class="wrapper wrapper-2">
                             <h3 class="advantages-title">Красивая дорога</h3>
-                            <span class="advantages-span">-№4-</span>
+                            <p class="advantages-description">-№4-</p>
                             <p class="advantages-description">
                              Ехать в Седону из Лас-Вегаса
                             совсем не скучно!</p>
@@ -164,7 +186,7 @@
                     <li class="advantages-time">
                         <div class="wrapper wrapper-1">
                             <h3 class="advantages-title">Мало туристов</h3>
-                             <span class="advantages-span">-№5-</span>
+                             <p class="advantages-description">-№5-</p>
                              <p class="advantages-description">
                              Большинство едет в Гранд
                             Каньон и толпится там</p>
@@ -181,7 +203,7 @@
                     Укажите предполагаемые даты поездки,
                     и мы покажем вам лучшие предложения гостиниц в Седоне 
                 </p>
-                <button type="button" class=" button big-button">
+                <button type="button" class="button big-button">
                     Поиск гостиницы в Седоне
                 </button>
             </section>
@@ -192,9 +214,9 @@
                     Только полезная информация и никакого спама,
                     честное бойскаутское!
                 </p>
-                <form action="#" class="spam-form">
-                    <input type="email" name="email" placeholder="Ваш e-mail" class="form-email">
-                    <input type="submit" value="Подписаться" class="form-button button">
+                <form class="spam-form" action="https://echo.htmlacademy.ru/">
+                    <input class="form-email" type="email" name="email" placeholder="Ваш e-mail">
+                    <input class="form-button button" type="submit" value="Подписаться">
                 </form>
             </section>
         </div>
@@ -241,5 +263,39 @@
         </div>
     </footer>
                                                 <!-- Подвал офф-->
+    <div class="modal-box">
+        <div class="modal modal-hotel-search">
+            <button class="modal-button-clous">
+                <span class="visually-hidden">Закрыть</span>
+            </button>
+            <section class="modal-content">
+                <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+            <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+                <div class="modal-input-group">
+                    <label class="modal-label" for="arrival">Дата заезда:</label>
+                        <input class="modal-field field" id="arrival" type="date" name="Arrival date" value="2023-09-02" min="2023-09-01" max="2027-09-01" placeholder="Укажие дату" required>
+                </div>
+                <div class="modal-input-group">
+                    <label class="modal-label" for="departure">Дата выезда:</label>
+                        <input class="modal-field field" id="departure" type="date" name="date of departure" value="2023-09-10" min="2023-09-01" max="2027-09-01" placeholder="Укажие дату" required>
+                </div>
+                <div class="modal-input-group">
+                    <label class="modal-label" for="adults">Взрослые:</label>
+                        <input class="modal-field-numb field" id="adults" type="number" name="Adults" min="1" value="2" required>
+                    <label class="modal-label" for="children">Дети:</label>
+                    <span class="info" aria-hidden="true">
+                        <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                        <span class="tooltip-children" role="tooltip" id="tooltip">
+                            Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                        </span>
+                    </span>
+                        <input class="modal-field-numb field" id="children" type="number" name="Сhildren" min="0" value="1" required>
+                </div>
+                <label class="visually-hidden" for="btn-search">Найти</label>
+                <input class="button modal-btn-search" type="submit" id="btn-search" value="Найти">
+            </form>
+        </section>
+        </div>
+    </div>
 </body>
 </html>

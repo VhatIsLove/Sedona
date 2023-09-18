@@ -20,18 +20,19 @@
 	font-display: swap;
 }
 html {
-	box-sizing: border-box;
-	height: 100%;
+	background-color: #F2F2F2;
 }
 a{
 	text-decoration: none;
 }
 body{
-	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-	margin: 0;
+	margin: 0 auto;
 	min-height: 100%;
+	width: 1200px;
+	background-color: #ffffff;
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
 	font-family: "PT Sans", sans-serif;
 	font-style: normal;
 	font-weight: 400;
@@ -60,15 +61,12 @@ ul, ol{
     font-family: "Kings";
     font-size: 32px;
     align-self: end;
-    background: linear-gradient(45deg, #b74502de 33%, #d4e10ff2 66%, #8AA9D6);
-    -webkit-background-cli: text;
-    -webkit-text-fill-color: transparent;
+	color: #BF9130;
     justify-self: center;
-	box-shadow: 0 0 4px 2px #BF9130 inset;
+	box-shadow: 0 0 4px 2px #BF9130;
 }
 .logo-link{
 	margin-right: auto;
-	z-index: 1;
 	display: grid;
     grid-template-columns: 80px 175px;
     grid-template-rows: 36px 36px;
@@ -87,6 +85,9 @@ ul, ol{
     font-size: 16px;
     justify-self: end;
     align-self: center;
+}
+.navigation-item{
+	position: relative;
 }
 .navigation-link{
 	position: relative;
@@ -172,6 +173,7 @@ ul, ol{
 
 /* Кнопки старт*/
 .button{
+	box-sizing: border-box;
 	text-align: center;
 	text-transform: uppercase;
 	color: #ffffff;
@@ -186,10 +188,8 @@ ul, ol{
 	font-size: 16px;
 	line-height: 20px;
 	width: 160px;
-	height: 37px;
 	text-decoration: none;
-	padding: 8px 15px;
-	box-sizing: border-box;
+	padding: 9px 15px;
 }
 .button-header:hover{
 	box-shadow: 0 0 5px 5px #926f3b;
@@ -250,7 +250,7 @@ ul, ol{
 	box-sizing: border-box;
 	background-color: #A66C00;
 	width: 133px;
-	height: 37px;
+	min-height: 37px;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 21px;
@@ -274,7 +274,7 @@ ul, ol{
 	background-color: #e9d855;
 	color: #000;
 	width: 141px;
-	height: 37px;
+	min-height: 37px;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 21px;
@@ -294,14 +294,8 @@ ul, ol{
 	color: rgba(0, 0, 0, 0.3);
 	transition: 0.1s;
 }
-.product-card-button-green{
+.favarit{
 	background-color: #7DB54F;
-	width: 141px;
-	height: 37px;
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 21px;
-	justify-self: end;
 }
 .product-card-button-green:hover{
 	background-color: #6C9E42;
@@ -320,8 +314,9 @@ ul, ol{
 	text-decoration: none;
 	background-color: #A66C00;
 	display: flex;
-	width: 55px;
-	height: 55px;
+	padding: 14px 15px;
+	min-width: 55px;
+	box-sizing: border-box;
 	align-items: center;
 	justify-content: center;
 }
@@ -354,7 +349,7 @@ ul, ol{
 	line-height: 36px;
 
 	width: 575px;
-	height: 60px;
+	padding: 14px;
 	background: #A66C00;
 	border-radius: 10px;
 }
@@ -405,6 +400,7 @@ ul, ol{
 	border: 2px solid #E6E6E6;
     border-radius: 4px;
 	margin-right: 8px;
+	margin-bottom: 8px;
 }
 .button-link-tile:nth-child(3n){
 	margin-right: 0;
@@ -422,14 +418,43 @@ ul, ol{
 .active-sorting{
 	border-color: #000000;
 }
+.button-range{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #fff;
+	cursor: pointer;
+}
+.button-range:hover{
+	background-color: rgb(202, 202, 202);
+	box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5)
+}
+.button-range:focus{
+	outline: 3px solid #613002;
+	background-color: rgb(202, 202, 202);
+}
+.button-range:active{
+	outline: 2px solid #613002;
+	background-color: rgb(172, 172, 172);
+}
+.min-cena{
+	top: -8px;
+	left: -10px;
+}
+.max-cena{
+	top: -8px;
+	right: -10px;
+}
 /* Кнопки финиш*/
 
 
 /*Основная часть Котолог старт*/
 .catalog-filter{
-	background: #09e9e986 url("../image/Rast/catalog-background-new.jpg") no-repeat;
+	background: #005f5f86 url("../image/Rast/catalog-background-new.jpg") no-repeat;
 	max-width: 1200px;
-	height: 408px;
+	min-width: 408px;
 	box-sizing: border-box;
 	color: #FFFFFF;
 	font-size: 18px;
@@ -482,10 +507,63 @@ ul, ol{
 .breadcrnmbs-item{
 	margin-right: 11px;
 }
+
+
 .checkbox-input{
 	width: 10px;
 	height: auto;
 }
+.form-item{
+	margin-bottom: 8px;
+}
+.label-checkbox-filter{
+	position: relative;
+	display: block;
+	cursor: pointer;
+}
+.label-checkbox-filter:hover .control-mark{
+	background-color: rgba(255, 255, 255, 0.60);
+}
+.label-checkbox-filter:focus .control-mark{
+	background-color: rgba(255, 255, 255, 0.1);
+	outline: 3px solid #865803b6;
+}
+.label-checkbox-filter:active .control-mark{
+	background-color: rgba(255, 255, 255, 0.3);
+}
+.control-mark{
+	position: absolute;
+	top: 2px;
+	width: 20px;
+	height: 20px;
+	border-radius: 4px;
+	background-color: #fff;
+}
+.checkbox-input[type="radio"] + .control-mark {
+	border-radius: 50%;
+  }
+.control-label{
+	padding-left: 40px;
+}
+.checkbox-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 12px;
+  height: 10px;
+  background: url("../image/Vektor/main/cheked.svg") no-repeat;
+  content: "";
+}
+.checkbox-input[type="radio"]:checked + .control-mark::before {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: rgba(63, 94, 114, 1);
+	content: "";
+  }
 .fieldset-box{
 	display: flex;
 	width: 150px;
@@ -506,8 +584,24 @@ ul, ol{
 	margin: 0;
 	margin-right: 81px;
 }
+.range-box-inputs{
+	display: flex;
+	margin-bottom: 32px;
+}
+.range-scale{
+	position: relative;
+	height: 4px;
+	border-radius: 2px;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+.range-active{
+	position: absolute;
+	height: 4px;
+	background-color: #fff;
+}
 .form-filter{
 	display: flex;
+	flex-wrap: wrap;
 	margin-top: 45px;
 }
 .form-list{
@@ -541,6 +635,8 @@ ul, ol{
 	margin-right: 185px;
 }
 .select-sorting{
+	font-family: inherit;
+	padding-left: 19px;
 	width: 287px;
 	height: 48px;
 	border: 2px solid #E6E6E6;
@@ -548,6 +644,11 @@ ul, ol{
 	font-size: 18px;
 	line-height: 23px;
 	margin-right: 81px;
+
+	appearance: none;
+	background-image: url("../image/Vektor/main/open-select.svg");
+  	background-repeat: no-repeat;
+  	background-position: right 21px center;
 }
 .select-sorting:hover,
 .select-sorting:focus{
@@ -563,18 +664,20 @@ ul, ol{
 .form-sorting-button{
 	display: flex;
 	flex-wrap: wrap;
-	width: 165px;
+	min-width: 160px;
 }
 .input-price{
+	font-family: inherit;
+	font-size: 18px;
 	box-sizing: border-box;
 	border: 2px solid #FFFFFF;
 	color: #fff;
-	border-radius: 4px;
 	background-color: transparent;
 	width: 143px;
 	height: 48px;
 	margin-top: 34px;
 	padding: 14px 19px;
+	appearance: textfield;
 }
 .input-price:hover{
 	border: 2px solid rgba(255, 255, 255, 0.6);
@@ -590,6 +693,11 @@ ul, ol{
 	background-color: #75625793;
 	box-shadow: none;
 	color: white;
+}
+.input-price::-webkit-outer-spin-button,
+.input-price::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 /* карточки товара старт */
 .product-cards-link-img{
@@ -613,6 +721,7 @@ ul, ol{
 }
 .product-card-terms, .product-card-definition{
 	line-height: 23px;
+	max-width: 140px;
 }
 .product-card-definition{
 	margin-left: auto;
@@ -625,7 +734,7 @@ ul, ol{
 .rating-text{
 	display: block;
     width: 160px;
-    padding: 9px 0 10px;
+    padding: 10px;
 	background-color: #F2F2F2;
 	border-radius: 4px;
 	border: 0;
@@ -637,21 +746,22 @@ ul, ol{
 }
 .star-reyting{
 	margin-left: 7px;
+	background: url("../image/Vektor/main/star-reyting.svg") no-repeat;
+	width: 18px;
+	height: 18px;
 }
 .star-reyting:first-child{
 	margin: 0;
+}
+.star-reyting:hover{
+	transform: rotate(360deg);
+	transition: 0.6s;
 }
 .box-card-product{
 	display: grid;
 	grid-template-columns: repeat(3, 340px);
 	gap: 10px 18px;
 	margin: 0 72px 64px;
-}
-.pagination-box{
-	display: flex;
-	justify-content: space-between;
-    align-items: center;
-	margin-bottom: 73px;
 }
 .product-card{
 	display: grid;
@@ -660,6 +770,7 @@ ul, ol{
 	padding: 20px;
 	row-gap: 16px;
 }
+
 /* карточки товара офф */
 hr{
 	width: 1055px;
@@ -668,13 +779,23 @@ hr{
 hr~hr{
 	margin-bottom: 65px;
 }
+.pagination-box{
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+	margin-bottom: 73px;
+	padding: 0 71px;
+}
 .pagination-list{
 	display: flex;
+	flex-wrap: wrap;
+	width: 45%;
 	padding: 0;
 	margin: 0;
 }
 .pagination-item{
 	margin-right: 8px;
+	margin-bottom: 8px;
 }
 .pagination-item:last-child{
 	margin-right: 0;
@@ -683,10 +804,17 @@ hr~hr{
 	line-height: 23px;
 }
 .select-card{
+	font-family: inherit;
+	padding-left: 14px;
 	width: 160px;
 	height: 48px;
 	border-color: #E6E6E6;
 	border-radius: 4px;
+
+	appearance: none;
+	background-image: url("../image/Vektor/main/open-select.svg");
+  	background-repeat: no-repeat;
+  	background-position: right 21px center;
 }
 .select-card:hover,
 .select-card:focus{
@@ -777,8 +905,10 @@ a .img:hover{
 	margin: 0;
 }
 .advantages-description{
+	text-align: center;
 	max-width: 250px;
 	margin: 0;
+	margin-bottom: 30px;
 }
 .img-adventages{
 	grid-column: 2/-1;
@@ -791,7 +921,7 @@ a .img:hover{
 	box-sizing: border-box;
 	background-color: #A66C00;
 	color: #fff;
-	padding-top: 98px;
+	padding: 98px 72px 0px;
 	width: 400px;
 	min-height: 384px;
 	display: flex;
@@ -828,20 +958,16 @@ a .img:hover{
 	margin-top: 23px;
 	margin-bottom: 20px;
 }
-.advantages-span{
-	margin-bottom: 30px;
-}
-.advantages-description{
-	text-align: center;
-}
 /*Преимущества*/
 
 /*Сервис и рассылка*/
 .services{
 	background-color: #ffffff;
+	box-sizing: border-box;
 	width: 1200px;
 	text-align: center;
 	margin-bottom: 93px;
+	padding: 0 120px;
 }
 .services-title{
 	margin-top: 0;
@@ -858,9 +984,9 @@ a .img:hover{
 	margin-bottom: 56px;
 }
 .spam{
-	padding-top: 80px;
+	padding: 80px 120px;
 	box-sizing: border-box;
-	background: url("../image/Rast/sedona_canyon_land_landscape.jpg") no-repeat;
+	background: url("../image/Rast/fon-ingex-spam.jpg") no-repeat;
 	background-size: 100%;
 	Width: 1200px;
 	min-height: 411px;
@@ -876,7 +1002,7 @@ a .img:hover{
 	text-align: center;
 	vertical-align: bottom;
 	color: #fff;
-	padding: 100px 0;
+	padding: 80px 120px;
 }
 .spam-title-catalog{
 	margin-top: 0;
@@ -913,6 +1039,7 @@ a .img:hover{
     justify-content: center;
 }
 .form-email{
+	font-family: inherit;
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 26px;	
@@ -922,6 +1049,8 @@ a .img:hover{
 	background-color: #F2F2F2;
 	border-radius: 10px 0px 0px 10px;
 	border: 0;
+	box-sizing: border-box;
+	padding-left: 22px;
 }
 .form-email:hover{
 	background-color: #E6E6E6;
@@ -941,8 +1070,333 @@ a .img:hover{
 
 /*Основная часть Главная страница офф*/
 
+/* Модальное окно старт */
 
+.modal-box{
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(242, 242, 242, 0.8);
+	overflow-y: auto;
+	visibility: hidden;
+    opacity: 0;
+}
+.modal-box.open{
+	visibility: visible;
+	opacity: 1;
+	transition: opacity .4s, visibility .4s;
+}
+.modal{
+	position: relative;
+	margin: auto;
+	padding: 70px;
+	background-color: #fff;
+}
+.modal-hotel-search{
+	width: 715px;
+	box-sizing: border-box;
+	border-radius: 30px;
+	box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.2);
+	transform: scale(0);
+	transition: transform .8s;
+}
+.modal-box.open .modal-hotel-search{
+	transform: scale(1);
+}
+.modal-title{
+	font-family: inherit;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 40px;
+	text-transform: uppercase;
+	margin-bottom: 60px;
+	margin-top: 0;
+}
+.modal-label{
+	font-family: inherit;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 40px;
+}
+.modal-input-group{
+	margin-bottom: 40px;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.field{
+	font-family: inherit;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 40px;
 
+	border: none;
+	border-radius: 4px;
+	background-color: #F2F2F2;
+	box-sizing: border-box;
+	padding: 10px 19px;
+}
+.field:hover,
+.field:focus{
+	outline: none;
+	box-shadow: 0 0 2px 2px #613002;
+}
+.field:active{
+	color: #333;
+	box-shadow: 0 0 10px 2px #333333;
+	background-color: #E6E6E6;
+}
+.modal-field{
+	width: 420px;
+}
+.modal-field-numb{
+	max-width: 133px;
+}
+.info{
+	position: relative;
+	width: 25px;
+	height: 25px;
+	border: none;
+	border-radius: 50%;
+	background-color: #A66C00;
+	cursor: pointer;
+}
+.info:hover{
+	box-shadow: 0 0 5px 5px #926f3b;
+	background-color: #bb7b05d7;
+}
+.info:focus{
+	outline: none;
+	box-shadow: inset 0 0 0 3px #613002;
+	background: #865803d7;
+}
+.info:active{
+	box-shadow: 0 0 5px 5px #5e4726;
+	background-color: #865803d7;
+	color: rgba(255, 255, 255, 0.3);}
+.info::after{
+	content: "i";
+	position: absolute;
+	top: 2%;
+	left: 10px;
+	width: 1px;
+	height: 9px;
+	color: #ffffff;
+}
+.tooltip-children{
+	background-color: #333333;
+	color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    left: 50%;
+    line-height: 20px;
+    margin-top: 15px;
+    min-width: 216px;
+    padding: 20px 20px 22px;
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%);
+	opacity: 0;
+	visibility: hidden;
+}
+.tooltip-children::before{
+	position: absolute;
+	content: "";
+	width: 19px;
+	height: 9px;
+	left: 50%;
+	top: -9px;
+	transform: translateX(-50%);
+	background-image: url("../image/Vektor/main/triangle-modal.svg");
+	background-repeat: no-repeat;
+}
+.info:hover .tooltip-children{
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 0.4s, opacity 0.4s;
+}
+.modal-btn-search{
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 40px;
+	width: 575px;
+	padding: 10px;
+	background-color: #A66C00;
+}
+.modal-btn-search:hover{
+	box-shadow: 0 0 5px 5px #926f3b;
+	background-color: #bb7b05d7;
+}
+.modal-btn-search:focus{
+	outline: none;
+	box-shadow: inset 0 0 0 3px #613002;
+	background-color: #865803d7;
+}
+.modal-btn-search:active{
+	box-shadow: 0 0 5px 5px #5e4726;
+	background-color: #865803d7;
+	color: rgba(255, 255, 255, 0.3);}
+
+.modal-button-clous{
+	position: absolute;
+	top: 54px;
+	right: 70px;
+	width: 53px;
+	height: 53px;
+	border: none;
+	border-radius: 50%;
+	background-color: #A66C00;
+	cursor: pointer;
+}
+.modal-button-clous:hover{
+	background-color: #bb7b05d7;
+}
+.modal-button-clous:focus{
+	outline: 3px solid #5e4726;
+	background-color: #865803d7;
+}
+.modal-button-clous:active{
+	box-shadow: 0 0 5px 5px #5e4726;
+	background-color: #865803d7;;
+}
+.modal-button-clous::after{
+	content: "";
+	position: absolute;
+	width: 13px;
+	height: 13px;
+	top: 21px;
+	left: 21px;
+	background: url("../image/Vektor/main/modal-close.svg") no-repeat;
+}
+.modal-button-clous:hover::after{
+	transform: rotate(360deg);
+	transition: 0.8s;
+	transform-origin: 50% 50%;
+}
+.modal-button-clous:active::after{
+	transform: rotate(-360deg);
+	transition: 0.6s;
+	transform-origin: 50% 50%;
+}
+/* Модальное окно офф */
+
+/* Поповер старт */
+.popover {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	box-sizing: border-box;
+	border-radius: 5px;
+	width: 300px;
+	padding: 40px;
+	font-family: inherit;
+	color: #333333;
+	background-color: #ffffff;
+	min-height: 186px;
+	box-shadow: 0 18px 40px rgba(79, 70, 60, 0.16);
+	visibility: hidden;
+	opacity: 0;
+}
+.popover-favorites{
+	width: 400px;
+}
+.popover-content {
+	height: 100%;
+}
+.popover.open{
+	visibility: visible;
+	opacity: 1;
+}
+.popover-list-element{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 100px 95px auto;
+	grid-template-rows: auto auto;
+}
+.popover-list-element + .popover-list-element {
+	margin-top: 24px;
+	padding-top: 24px;
+	border-top: 1px dashed #595959;
+  }
+.popover-list{
+	padding: 0;
+}
+.popover-cards-link{
+	font-size: 17px;
+	color: #333333;
+	grid-column: 1/3;
+}
+.popover-card-title{
+	margin: 0;
+}
+.popover-text{
+	grid-column: 1/2;
+}
+.popover-text,.popover-price{
+	font-size: 15px;
+}
+.popover-title {
+	margin-top: 0;
+	margin-bottom: 20px;
+	font-size: 28px;
+	line-height: 35px;
+	text-transform: uppercase;
+}
+.btn-delete{
+	width: 40px;
+	height: 40px;
+	padding-top: 5px;
+	grid-row: 1/-1;
+	grid-column: 3/-1;
+	justify-self: end;
+}
+.btn-delete:hover{
+	background-color: #919191d7;
+}
+.btn-delete:focus{
+	outline: 3px solid #5e4726;
+	background-color: #b8b8b8bd;
+}
+.btn-delete:active{
+	background-color: #b8b8b8bd;
+	box-shadow: #595959;
+	outline: none;
+}
+.popover-close-btn{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 65px;
+	height: 50px;
+	padding-left: 20px;
+    color: #000000;
+    font-weight: 700;
+	background-color: #A66C00;
+	background-image: url("../image/Vektor/header/favorite-new.svg");
+	background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.popover-close-btn:hover{
+	background-color: #bb7b05d7;
+}
+.popover-close-btn:focus{
+	outline: 3px solid #5e4726;
+	background-color: #865803d7;
+}
+.popover-close-btn:active{
+	box-shadow: 0 0 5px 5px #5e4726;
+	background-color: #865803d7;;
+}
+/* Поповер офф */
 /*Подвал*/
 .footer-navigations{
 	display: flex;
@@ -954,7 +1408,7 @@ a .img:hover{
 .footer-list{
 	padding: 0;
 	margin-top: 10px;
-	width: 150px;
+	min-width: 150px;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -967,6 +1421,7 @@ a[href^="tel:"]{
 	text-decoration: none;
 	text-align: center;
 	color: #333;
+	max-width: 750px;
 }
 a[href^="tel:"]:before{
 	content: "\260e";
@@ -1028,10 +1483,6 @@ a[href^="tel:"]:before{
 }
 .footer-time:nth-child(3n){
 	padding-right: 0;
-}
-.star-reyting{
-	fill: gold;
-	cursor: pointer;
 }
 .star-reyting:hover{
 	transform: rotate(360deg);
